@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="referencearchitecturemodeling" nsURI="http://it.univaq.disim/referencearchitecturemodeling"
+    nsPrefix="referencearchitecturemodeling">
+  <eClassifiers xsi:type="ecore:EClass" name="ReferenceArchitecturalModel">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="referenceArchitecturalName"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="raelements" lowerBound="1"
+        upperBound="-1" eType="#//RAElement" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RAElement" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
+        eType="#//RAAttribute" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="highlighted" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RAComponent" eSuperTypes="#//RAElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="child" upperBound="-1"
+        eType="#//RAElement" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="incoming" upperBound="-1"
+        eType="#//RAConnector" eOpposite="#//RAConnector/targetRef"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="outgoing" upperBound="-1"
+        eType="#//RAConnector" eOpposite="#//RAConnector/sourceRef"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="mandatory" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RAConnector" eSuperTypes="#//RAElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="targetRef" lowerBound="1"
+        eType="#//RAComponent" eOpposite="#//RAComponent/incoming"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sourceRef" lowerBound="1"
+        eType="#//RAComponent" eOpposite="#//RAComponent/outgoing"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="twoWay" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RAAttribute">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="value" lowerBound="1" eType="#//RAValueType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RAValueType" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RASimpleValue" eSuperTypes="#//RAValueType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RAComplexValue" eSuperTypes="#//RAValueType">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="child" lowerBound="1" upperBound="-1"
+        eType="#//RAValueType" containment="true"/>
+  </eClassifiers>
+</ecore:EPackage>

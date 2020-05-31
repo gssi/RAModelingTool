@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ASCII"?>
+<referencearchitecturemodeling:ReferenceArchitecturalModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:referencearchitecturemodeling="http://it.univaq.disim/referencearchitecturemodeling" xmi:id="_inclwJ0gEeqyDdlmWvgo0Q" referenceArchitecturalName="RA_CAV_Cloud">
+  <raelements xsi:type="referencearchitecturemodeling:RAComponent" xmi:id="_pDWnUJ0iEeqyDdlmWvgo0Q" name="Vehicles" outgoing="_HPG0QJ0jEeqyDdlmWvgo0Q" mandatory="true"/>
+  <raelements xsi:type="referencearchitecturemodeling:RAComponent" xmi:id="_sIP7sJ0iEeqyDdlmWvgo0Q" name="ThirdPartyClouds" outgoing="_jes2EJ2dEeqgL5pVb8llMQ" mandatory="true"/>
+  <raelements xsi:type="referencearchitecturemodeling:RAComponent" xmi:id="_yTnRwJ0iEeqyDdlmWvgo0Q" name="Edge" incoming="_HPG0QJ0jEeqyDdlmWvgo0Q _jes2EJ2dEeqgL5pVb8llMQ" outgoing="_nsRpwJ2dEeqgL5pVb8llMQ _tUWFgJ2dEeqgL5pVb8llMQ" mandatory="true"/>
+  <raelements xsi:type="referencearchitecturemodeling:RAComponent" xmi:id="_1NlIgJ0iEeqyDdlmWvgo0Q" name="Devices and Peripherals" incoming="_nsRpwJ2dEeqgL5pVb8llMQ" mandatory="true"/>
+  <raelements xsi:type="referencearchitecturemodeling:RAComponent" xmi:id="_5ZRs4J0iEeqyDdlmWvgo0Q" name="Cloud" mandatory="true">
+    <child xsi:type="referencearchitecturemodeling:RAComponent" xmi:id="_69wXYJ0iEeqyDdlmWvgo0Q" name="Communications" incoming="_tUWFgJ2dEeqgL5pVb8llMQ" outgoing="_wHYN0J2dEeqgL5pVb8llMQ _Y1owMJ2eEeqgL5pVb8llMQ" mandatory="true"/>
+    <child xsi:type="referencearchitecturemodeling:RAComponent" xmi:id="_063K8J2dEeqgL5pVb8llMQ" name="Microservices" incoming="_wHYN0J2dEeqgL5pVb8llMQ _bNxsQJ2eEeqgL5pVb8llMQ" outgoing="_kezywJ2eEeqgL5pVb8llMQ _makU0J2eEeqgL5pVb8llMQ" mandatory="true"/>
+    <child xsi:type="referencearchitecturemodeling:RAComponent" xmi:id="_99YxQJ0iEeqyDdlmWvgo0Q" name="Data Storage" incoming="_onYKoJ2eEeqgL5pVb8llMQ" outgoing="_bNxsQJ2eEeqgL5pVb8llMQ _fxzREJ2eEeqgL5pVb8llMQ" mandatory="true"/>
+    <child xsi:type="referencearchitecturemodeling:RAComponent" xmi:id="_BavB4J0jEeqyDdlmWvgo0Q" name="APIs" incoming="_Y1owMJ2eEeqgL5pVb8llMQ _kezywJ2eEeqgL5pVb8llMQ" mandatory="true"/>
+    <child xsi:type="referencearchitecturemodeling:RAComponent" xmi:id="_DhfTAJ0jEeqyDdlmWvgo0Q" name="Data Analysis" incoming="_fxzREJ2eEeqgL5pVb8llMQ _makU0J2eEeqgL5pVb8llMQ" outgoing="_3EhJoJ2eEeqgL5pVb8llMQ" mandatory="true"/>
+    <child xsi:type="referencearchitecturemodeling:RAComponent" xmi:id="_ETv2YJ0jEeqyDdlmWvgo0Q" name="Monitoring" incoming="_3EhJoJ2eEeqgL5pVb8llMQ" outgoing="_onYKoJ2eEeqgL5pVb8llMQ" mandatory="true"/>
+    <child xsi:type="referencearchitecturemodeling:RAConnector" xmi:id="_wHYN0J2dEeqgL5pVb8llMQ" name="" targetRef="_063K8J2dEeqgL5pVb8llMQ" sourceRef="_69wXYJ0iEeqyDdlmWvgo0Q" twoWay="true"/>
+    <child xsi:type="referencearchitecturemodeling:RAConnector" xmi:id="_Y1owMJ2eEeqgL5pVb8llMQ" name="" targetRef="_BavB4J0jEeqyDdlmWvgo0Q" sourceRef="_69wXYJ0iEeqyDdlmWvgo0Q" twoWay="true"/>
+    <child xsi:type="referencearchitecturemodeling:RAConnector" xmi:id="_bNxsQJ2eEeqgL5pVb8llMQ" name="" targetRef="_063K8J2dEeqgL5pVb8llMQ" sourceRef="_99YxQJ0iEeqyDdlmWvgo0Q" twoWay="true"/>
+    <child xsi:type="referencearchitecturemodeling:RAConnector" xmi:id="_fxzREJ2eEeqgL5pVb8llMQ" name="" targetRef="_DhfTAJ0jEeqyDdlmWvgo0Q" sourceRef="_99YxQJ0iEeqyDdlmWvgo0Q" twoWay="true"/>
+    <child xsi:type="referencearchitecturemodeling:RAConnector" xmi:id="_kezywJ2eEeqgL5pVb8llMQ" targetRef="_BavB4J0jEeqyDdlmWvgo0Q" sourceRef="_063K8J2dEeqgL5pVb8llMQ" twoWay="true"/>
+    <child xsi:type="referencearchitecturemodeling:RAConnector" xmi:id="_makU0J2eEeqgL5pVb8llMQ" targetRef="_DhfTAJ0jEeqyDdlmWvgo0Q" sourceRef="_063K8J2dEeqgL5pVb8llMQ" twoWay="true"/>
+    <child xsi:type="referencearchitecturemodeling:RAConnector" xmi:id="_onYKoJ2eEeqgL5pVb8llMQ" targetRef="_99YxQJ0iEeqyDdlmWvgo0Q" sourceRef="_ETv2YJ0jEeqyDdlmWvgo0Q"/>
+    <child xsi:type="referencearchitecturemodeling:RAConnector" xmi:id="_3EhJoJ2eEeqgL5pVb8llMQ" targetRef="_ETv2YJ0jEeqyDdlmWvgo0Q" sourceRef="_DhfTAJ0jEeqyDdlmWvgo0Q"/>
+  </raelements>
+  <raelements xsi:type="referencearchitecturemodeling:RAConnector" xmi:id="_HPG0QJ0jEeqyDdlmWvgo0Q" name="V2I" targetRef="_yTnRwJ0iEeqyDdlmWvgo0Q" sourceRef="_pDWnUJ0iEeqyDdlmWvgo0Q" twoWay="true"/>
+  <raelements xsi:type="referencearchitecturemodeling:RAConnector" xmi:id="_jes2EJ2dEeqgL5pVb8llMQ" name="" targetRef="_yTnRwJ0iEeqyDdlmWvgo0Q" sourceRef="_sIP7sJ0iEeqyDdlmWvgo0Q" twoWay="true"/>
+  <raelements xsi:type="referencearchitecturemodeling:RAConnector" xmi:id="_nsRpwJ2dEeqgL5pVb8llMQ" name="Wifi/Cellular" targetRef="_1NlIgJ0iEeqyDdlmWvgo0Q" sourceRef="_yTnRwJ0iEeqyDdlmWvgo0Q" twoWay="true"/>
+  <raelements xsi:type="referencearchitecturemodeling:RAConnector" xmi:id="_tUWFgJ2dEeqgL5pVb8llMQ" name="" targetRef="_69wXYJ0iEeqyDdlmWvgo0Q" sourceRef="_yTnRwJ0iEeqyDdlmWvgo0Q" twoWay="true"/>
+</referencearchitecturemodeling:ReferenceArchitecturalModel>

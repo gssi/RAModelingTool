@@ -1,0 +1,52 @@
+digraph G {
+
+  node[shape=box3d, fontname=Tahoma, fontsize=14, style="filled", 
+    gradientangle="270", fillcolor="bisque:floralwhite"]
+ 
+  edge[penwidth=1, style=dashed, dir=forward, arrowhead=vee, fontsize=8, len=2.0]
+   
+
+[% 
+for (p in raelements.select(c|c.isTypeOf(RAComponent))){%]
+
+  [% var cluster_nr=0;
+  if(p.child.size()>0){%]
+  subgraph cluster_[%=cluster_nr%] {
+  	
+		
+		
+		[%for (c in p.child.select(c|c.isTypeOf(RAComponent))){%]
+			[%for (lc in c.outgoing){%]
+    			  "[%=c.name%]" -> "[%=lc.targetRef.name%]" [color="[%if(lc.highlighted){%]#F72E03[%}else{%]#2A6C41[%}%]" [%if(lc.twoWay){%],dir="both"[%}%]]
+   			 [%}%]
+		[%}%]
+		label = "[%=p.name%]";
+  }
+  
+  [% cluster_nr++;
+  }else{%]
+  "[%=p.name%]" [%if (raelements.size()==1){%][fillcolor="azure2:ghostwhite"][%}else if(p.highlighted){%][fillcolor="#F9B0A1"][%}%]
+  
+  [%if (isLayerActive("outgoing")){%]
+    [%for (l in p.outgoing){%]
+      "[%=p.name%]" -> "[%=l.targetRef.name%]" [color="[%if(l.highlighted){%]#F72E03[%}else{%]#2A6C41[%}%]" [%if(l.twoWay){%],dir="both"[%}%] ]
+    [%}%]
+  [%} 
+  }
+  %]
+    
+    
+[%}%]
+}
+ 
+[%
+operation isLayerActive(id : String) {
+  var layer = layers.selectOne(l|l.id = id);
+  if (layer.isDefined()) {
+    return layer.active;
+  }
+  else {
+    return true;
+  }
+}
+%]

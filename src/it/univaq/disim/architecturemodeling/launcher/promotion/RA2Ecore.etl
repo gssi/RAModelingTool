@@ -1,0 +1,33 @@
+
+rule RefArchModel
+transform s : ra!ReferenceArchitecturalModel
+  to p : ecore!EPackage, c:ecore!EClass {
+  
+  p.name = s.referenceArchitecturalName;
+  p.eClassifiers::=s.raelements.select(c|c.isTypeOf(RAComponent));
+  c.name = s.referenceArchitecturalName;
+  for (comp in s.raelements.select(c|c.isTypeOf(RAComponent) and c.mandatory)) { 
+	var  ref: ecore!EReference=new ecore!EReference();
+	ref.name=comp.name.toLowerCase()+'s';
+	ref.eType::=comp;
+	ref.lowerBound=1;
+	c.ereferences.add(ref);
+  }
+  p.eClassifiers.add(c);
+}
+
+
+rule RAComponent
+transform s: ra!RAComponent
+to c: ecore!EClass{
+c.name=s.name;
+c.eStructuralFeatures::=s.outgoing;
+}
+
+rule Connector
+transform s: ra!RAConnector
+to r: ecore!EReference{
+r.name=s.name;
+r.eType::=s.targetRef;
+
+}

@@ -1,0 +1,19 @@
+<?nsuri http://it.univaq.disim/referencearchitecturemodeling?>
+<?render-egx ../../../../tools/visualization/RA2Graphviz.egx?>  
+[%if(ra.isDefined()){ %]
+<ReferenceArchitecturalModel referenceArchtiecturalName="[%=ra.referenceArchitecturalName%]">
+[%for (el in ra.raelements.select(c|c.isTypeOf(RAComponent))) { %]
+<RAComponent name="[%=el.name%]" highlighted="[%=el.highlighted%]"  >
+[%for (ch in el.child.select(c|c.isTypeOf(RAComponent))) { %]
+<RAComponent name="[%=ch.name%]" highlighted="[%=ch.highlighted%]" />
+[%}%]
+[%for (chc in el.child.select(c|c.isTypeOf(RAConnector))) { %]
+<RAConnector sourceRef="[%=chc.sourceRef.name%]" targetRef="[%=chc.targetRef.name%]" highlighted="[%=chc.highlighted%]"  twoWay="[%=chc.twoWay%]"/>  
+[%}%]
+</RAComponent>  
+[%}%]
+[%for (el in ra.raelements.select(c|c.isTypeOf(RAConnector))) { %]
+<RAConnector sourceRef="[%=el.sourceRef.name%]" targetRef="[%=el.targetRef.name%]" highlighted="[%=el.highlighted%]" twoWay="[%=el.twoWay%]" />  
+[%}%]
+</ReferenceArchitecturalModel>
+[%}%]

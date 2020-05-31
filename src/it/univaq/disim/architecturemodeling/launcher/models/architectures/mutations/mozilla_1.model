@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ASCII"?>
+<architecturemodeling:ArchitectureModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:architecturemodeling="http://it.disim.univaq/architecturemodeling" xmi:id="_UkRWYDk9EeqJcpqbl9BcQw" name="Mozilla">
+  <architectureelements xsi:type="architecturemodeling:Component" xmi:id="_WTIE4Dk9EeqJcpqbl9BcQw" name="UserInterface" outgoing="_jXBZADk9EeqJcpqbl9BcQw"/>
+  <architectureelements xsi:type="architecturemodeling:Component" xmi:id="_X-O70Dk9EeqJcpqbl9BcQw" name="UI Toolkit (XPFE)" outgoing="_3zxUkDk-EeqJcpqbl9BcQw" incoming="_jXBZADk9EeqJcpqbl9BcQw"/>
+  <architectureelements xsi:type="architecturemodeling:Component" xmi:id="_eQNQMDk9EeqJcpqbl9BcQw" name="Gecko" outgoing="_OfI5ED38EeqEH4dp3OLgUw _al-vED38EeqEH4dp3OLgUw _fDajsD38EeqEH4dp3OLgUw _kq37cD38EeqEH4dp3OLgUw _oxGxAD38EeqEH4dp3OLgUw" incoming="_3zxUkDk-EeqJcpqbl9BcQw"/>
+  <architectureelements xsi:type="architecturemodeling:Component" xmi:id="_spa70D37EeqEH4dp3OLgUw" name="Security (NSS/PSM)" incoming="_OfI5ED38EeqEH4dp3OLgUw"/>
+  <architectureelements xsi:type="architecturemodeling:Component" xmi:id="_0G6BED37EeqEH4dp3OLgUw" name="Expat" incoming="_fDajsD38EeqEH4dp3OLgUw"/>
+  <architectureelements xsi:type="architecturemodeling:Component" xmi:id="_x4nkkD37EeqEH4dp3OLgUw" name="Spider-Monkey" incoming="_al-vED38EeqEH4dp3OLgUw"/>
+  <architectureelements xsi:type="architecturemodeling:Component" xmi:id="_1lW8ED37EeqEH4dp3OLgUw" name="GTK+ Adapter" outgoing="_4V-NED38EeqEH4dp3OLgUw" incoming="_kq37cD38EeqEH4dp3OLgUw"/>
+  <architectureelements xsi:type="architecturemodeling:Component" xmi:id="_3YCaoD37EeqEH4dp3OLgUw" name="GTK+/X11 Libraries" incoming="_4V-NED38EeqEH4dp3OLgUw"/>
+  <architectureelements xsi:type="architecturemodeling:Component" xmi:id="_6FnbMD37EeqEH4dp3OLgUw" name="User, Secure, Engine Persistence" incoming="_oxGxAD38EeqEH4dp3OLgUw"/>
+  <architectureelements xsi:type="architecturemodeling:Connector" xmi:id="_jXBZADk9EeqJcpqbl9BcQw" name="ui_toolkit" source="_WTIE4Dk9EeqJcpqbl9BcQw" target="_X-O70Dk9EeqJcpqbl9BcQw"/>
+  <architectureelements xsi:type="architecturemodeling:Connector" xmi:id="_3zxUkDk-EeqJcpqbl9BcQw" name="toolkit_gecko" source="_X-O70Dk9EeqJcpqbl9BcQw" target="_eQNQMDk9EeqJcpqbl9BcQw"/>
+  <architectureelements xsi:type="architecturemodeling:Connector" xmi:id="_OfI5ED38EeqEH4dp3OLgUw" name="gecko_necko" source="_eQNQMDk9EeqJcpqbl9BcQw" target="_spa70D37EeqEH4dp3OLgUw"/>
+  <architectureelements xsi:type="architecturemodeling:Connector" xmi:id="_al-vED38EeqEH4dp3OLgUw" name="gecko_spider_monkey" source="_eQNQMDk9EeqJcpqbl9BcQw" target="_x4nkkD37EeqEH4dp3OLgUw"/>
+  <architectureelements xsi:type="architecturemodeling:Connector" xmi:id="_fDajsD38EeqEH4dp3OLgUw" name="gecko_expat" source="_eQNQMDk9EeqJcpqbl9BcQw" target="_0G6BED37EeqEH4dp3OLgUw"/>
+  <architectureelements xsi:type="architecturemodeling:Connector" xmi:id="_kq37cD38EeqEH4dp3OLgUw" name="gecko_GTK" source="_eQNQMDk9EeqJcpqbl9BcQw" target="_1lW8ED37EeqEH4dp3OLgUw"/>
+  <architectureelements xsi:type="architecturemodeling:Connector" xmi:id="_oxGxAD38EeqEH4dp3OLgUw" name="gecko_user_secure_engine-persistence" source="_eQNQMDk9EeqJcpqbl9BcQw" target="_6FnbMD37EeqEH4dp3OLgUw"/>
+  <architectureelements xsi:type="architecturemodeling:Connector" xmi:id="_4V-NED38EeqEH4dp3OLgUw" name="gtk-adapter_gtk-x11" source="_1lW8ED37EeqEH4dp3OLgUw" target="_3YCaoD37EeqEH4dp3OLgUw"/>
+</architecturemodeling:ArchitectureModel>

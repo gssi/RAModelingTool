@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ASCII"?>
+<referencearchitecturemodeling:ReferenceArchitecturalModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:referencearchitecturemodeling="http://it.univaq.disim/referencearchitecturemodeling" xsi:schemaLocation="http://it.univaq.disim/referencearchitecturemodeling ../../metamodels/referencearchitecturemodeling.ecore" xmi:id="_vWxHQDd2Eeq4f61yJhOniQ" referenceArchitecturalName="RAWebBrowserModel">
+  <raelements xsi:type="referencearchitecturemodeling:RAComponent" xmi:id="_zMhQ0Dd2Eeq4f61yJhOniQ" name="UserInterface" highlighted="true" incoming="_G2wioDd-Eeq4f61yJhOniQ _YnVAcDeuEeqMX4D8tVOxig" outgoing="_BkrCIDd3Eeq4f61yJhOniQ _lnNcQDd3Eeq4f61yJhOniQ _oEn54Dd3Eeq4f61yJhOniQ"/>
+  <raelements xsi:type="referencearchitecturemodeling:RAComponent" xmi:id="_3MaN0Dd2Eeq4f61yJhOniQ" name="BrowserEngine" highlighted="true" incoming="_BkrCIDd3Eeq4f61yJhOniQ" outgoing="_rMtsMDd3Eeq4f61yJhOniQ _tpsE8Dd3Eeq4f61yJhOniQ _G2wioDd-Eeq4f61yJhOniQ"/>
+  <raelements xsi:type="referencearchitecturemodeling:RAComponent" xmi:id="_5MufwDd2Eeq4f61yJhOniQ" name="RenderingEngine" highlighted="true" incoming="_rMtsMDd3Eeq4f61yJhOniQ" outgoing="_wwxxsDd3Eeq4f61yJhOniQ _zRvSkDd3Eeq4f61yJhOniQ _2RlH0Dd3Eeq4f61yJhOniQ _4MGTwDd3Eeq4f61yJhOniQ _YnVAcDeuEeqMX4D8tVOxig"/>
+  <raelements xsi:type="referencearchitecturemodeling:RAComponent" xmi:id="_6o_CYDd2Eeq4f61yJhOniQ" name="Networking" incoming="_wwxxsDd3Eeq4f61yJhOniQ" mandatory="true"/>
+  <raelements xsi:type="referencearchitecturemodeling:RAComponent" xmi:id="_7p5FwDd2Eeq4f61yJhOniQ" name="JavascriptInterpreter" incoming="_zRvSkDd3Eeq4f61yJhOniQ" mandatory="true"/>
+  <raelements xsi:type="referencearchitecturemodeling:RAComponent" xmi:id="_9L-jkDd2Eeq4f61yJhOniQ" name="XMLParser" incoming="_2RlH0Dd3Eeq4f61yJhOniQ" mandatory="true"/>
+  <raelements xsi:type="referencearchitecturemodeling:RAComponent" xmi:id="_-VIkADd2Eeq4f61yJhOniQ" name="DisplayBackend" incoming="_oEn54Dd3Eeq4f61yJhOniQ _4MGTwDd3Eeq4f61yJhOniQ" mandatory="true"/>
+  <raelements xsi:type="referencearchitecturemodeling:RAComponent" xmi:id="__rn10Dd2Eeq4f61yJhOniQ" name="DataPersistence" incoming="_lnNcQDd3Eeq4f61yJhOniQ _tpsE8Dd3Eeq4f61yJhOniQ" mandatory="true"/>
+  <raelements xsi:type="referencearchitecturemodeling:RAConnector" xmi:id="_BkrCIDd3Eeq4f61yJhOniQ" name="ui_be" targetRef="_3MaN0Dd2Eeq4f61yJhOniQ" sourceRef="_zMhQ0Dd2Eeq4f61yJhOniQ"/>
+  <raelements xsi:type="referencearchitecturemodeling:RAConnector" xmi:id="_lnNcQDd3Eeq4f61yJhOniQ" name="ui_dp" targetRef="__rn10Dd2Eeq4f61yJhOniQ" sourceRef="_zMhQ0Dd2Eeq4f61yJhOniQ"/>
+  <raelements xsi:type="referencearchitecturemodeling:RAConnector" xmi:id="_oEn54Dd3Eeq4f61yJhOniQ" name="ui_db" targetRef="_-VIkADd2Eeq4f61yJhOniQ" sourceRef="_zMhQ0Dd2Eeq4f61yJhOniQ"/>
+  <raelements xsi:type="referencearchitecturemodeling:RAConnector" xmi:id="_rMtsMDd3Eeq4f61yJhOniQ" name="be_re" targetRef="_5MufwDd2Eeq4f61yJhOniQ" sourceRef="_3MaN0Dd2Eeq4f61yJhOniQ"/>
+  <raelements xsi:type="referencearchitecturemodeling:RAConnector" xmi:id="_tpsE8Dd3Eeq4f61yJhOniQ" name="be_dp" targetRef="__rn10Dd2Eeq4f61yJhOniQ" sourceRef="_3MaN0Dd2Eeq4f61yJhOniQ"/>
+  <raelements xsi:type="referencearchitecturemodeling:RAConnector" xmi:id="_wwxxsDd3Eeq4f61yJhOniQ" name="re_net" targetRef="_6o_CYDd2Eeq4f61yJhOniQ" sourceRef="_5MufwDd2Eeq4f61yJhOniQ"/>
+  <raelements xsi:type="referencearchitecturemodeling:RAConnector" xmi:id="_zRvSkDd3Eeq4f61yJhOniQ" name="re_ji" targetRef="_7p5FwDd2Eeq4f61yJhOniQ" sourceRef="_5MufwDd2Eeq4f61yJhOniQ"/>
+  <raelements xsi:type="referencearchitecturemodeling:RAConnector" xmi:id="_2RlH0Dd3Eeq4f61yJhOniQ" name="re_xml" targetRef="_9L-jkDd2Eeq4f61yJhOniQ" sourceRef="_5MufwDd2Eeq4f61yJhOniQ"/>
+  <raelements xsi:type="referencearchitecturemodeling:RAConnector" xmi:id="_4MGTwDd3Eeq4f61yJhOniQ" name="re_db" targetRef="_-VIkADd2Eeq4f61yJhOniQ" sourceRef="_5MufwDd2Eeq4f61yJhOniQ"/>
+  <raelements xsi:type="referencearchitecturemodeling:RAConnector" xmi:id="_G2wioDd-Eeq4f61yJhOniQ" name="be_ui" targetRef="_zMhQ0Dd2Eeq4f61yJhOniQ" sourceRef="_3MaN0Dd2Eeq4f61yJhOniQ"/>
+  <raelements xsi:type="referencearchitecturemodeling:RAConnector" xmi:id="_YnVAcDeuEeqMX4D8tVOxig" name="re_ui" targetRef="_zMhQ0Dd2Eeq4f61yJhOniQ" sourceRef="_5MufwDd2Eeq4f61yJhOniQ"/>
+</referencearchitecturemodeling:ReferenceArchitecturalModel>

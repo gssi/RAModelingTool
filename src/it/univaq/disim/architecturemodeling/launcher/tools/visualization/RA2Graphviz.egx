@@ -1,0 +1,36 @@
+rule RA2Graphviz 
+  transform n : referencearchitecturemodeling::ReferenceArchitecturalModel {
+ 
+  template : "RA2graphviz.egl"
+ 
+  parameters : Map{
+    "path" = Sequence{"ReferenceArchitecture"},
+    "icon" = "diagram-ffffff",
+    "format" = "graphviz-circo",
+    "layers" = Sequence {
+   		 Map {"id"="outgoing", "title"="outgoing", "active"=true},
+      	 Map {"id"="incoming", "title"="incoming", "active"=true}
+    },
+    "raelements" = n.raelements
+  }
+  
+}
+
+rule RAComponent2Graphviz 
+  transform c : referencearchitecturemodeling::RAComponent {
+ 
+  template : "RA2graphviz.egl"
+ 
+  parameters : Map{
+    "path" = Sequence{"ReferenceArchitecture", c.name},
+    "icon" = "diagram-c0c0c0",
+    "format" = "graphviz-dot",
+    "layers" = Sequence {
+      Map {"id"="outgoing", "title"="outgoing", "active"=true},
+      Map {"id"="incoming", "title"="incoming", "active"=true}
+    },
+    "raelements" = Sequence{c}
+  }
+ }
+  
+

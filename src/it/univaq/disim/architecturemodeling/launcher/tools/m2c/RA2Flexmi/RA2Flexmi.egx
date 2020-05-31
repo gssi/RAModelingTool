@@ -1,0 +1,9 @@
+rule RA2Graphviz 
+  transform ra : referencearchitecturemodeling::ReferenceArchitecturalModel {
+ 
+  template : "RA2Flexmi.egl"
+
+   target : "gen/" + ra.referenceArchitecturalName + ".flexmi"
+ 
+  
+}

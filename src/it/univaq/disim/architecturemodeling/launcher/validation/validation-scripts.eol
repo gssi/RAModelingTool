@@ -1,0 +1,44 @@
+operation weaving!Implementation_model checkMandatoryComponents(): Boolean{
+var components_to_check : Sequence <EClass> = ramm!EReference.all.select(r|r.lowerBound>0).etype;
+
+return self.relations.RAcomp.flatten().includesAll(components_to_check);
+
+}
+
+operation weaving!RA_ADL_Relation checkRelation(): Boolean {
+
+var emfTool = new Native("org.eclipse.epsilon.emc.emf.tools.EmfTool");
+var ecoreUtil = emfTool.ecoreUtil;
+
+var relation= self;
+var components= self.component;
+var racomponents=self.RAcomp;
+
+for (comp in components) { 
+//("comp: "+ comp).println();
+	for(r in comp.outgoing){
+	var source= r.source;
+	//source.println();
+	var target=r.target;
+	//target.println();
+	//var existing_rels_typing=racomponents.collect(rac|rac.eAllStructuralFeatures.etype).flatten();
+	
+	var source_ref_RA=weaving!RA_ADL_Relation.allInstances().select(rel|rel.component.includes(source)).collect(co|co.RAcomp).flatten();
+	//existing features allowed in the RA
+	var all_features=source_ref_RA.eAllStructuralFeatures.collect(t|t.etype);	
+	
+	//target_ref_RA declared connectors to be checked
+	var target_ref_RA=weaving!RA_ADL_Relation.allInstances().select(rel|rel.component.includes(target)).collect(co|co.RAcomp).flatten();
+	
+	for (trg in target_ref_RA) { 
+		
+		if(not racomponents.includes(trg) and not all_features.flatten().includes(trg)){
+		
+		 	return false;
+		}
+	}
+		 return true;
+	}
+}
+return true;
+}

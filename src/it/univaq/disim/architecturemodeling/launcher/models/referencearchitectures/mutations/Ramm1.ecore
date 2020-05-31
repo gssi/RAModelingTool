@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="ASCII"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="RAWebBrowserModel">
+  <eClassifiers xsi:type="ecore:EClass" name="UserInterface">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ui_be" eType="#//BrowserEngine"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ui_dp" eType="#//DataPersistence"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ui_db" eType="#//DisplayBackend"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BrowserEngine">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="be_re" eType="#//RenderingEngine"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="be_dp" eType="#//DataPersistence"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RenderingEngine">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="re_net" eType="#//Networking"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="re_ji" eType="#//JavascriptInterpreter"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="re_xml" eType="#//XMLParser"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="re_db" eType="#//DisplayBackend"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Networking"/>
+  <eClassifiers xsi:type="ecore:EClass" name="JavascriptInterpreter"/>
+  <eClassifiers xsi:type="ecore:EClass" name="XMLParser"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DisplayBackend"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DataPersistence"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RAWebBrowserModel">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="networkings" lowerBound="1"
+        eType="#//Networking"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="javascriptinterpreters"
+        lowerBound="1" eType="#//JavascriptInterpreter"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="xmlparsers" lowerBound="1"
+        eType="#//XMLParser"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="displaybackends" lowerBound="1"
+        eType="#//DisplayBackend"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="datapersistences" lowerBound="1"
+        eType="#//DataPersistence"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="userinterfaces" lowerBound="1"
+        eType="#//UserInterface"/>
+  </eClassifiers>
+</ecore:EPackage>

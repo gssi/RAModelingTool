@@ -1,0 +1,19 @@
+<?nsuri http://it.disim.univaq/architecturemodeling?>
+<?render-egx ../../Architectural2GraphViz/Architecture2Graphviz.egx?>  
+[%if(a.isDefined()){ %]
+<ArchitectureModel name="[%=a.name%]">
+[%for (el in a.architectureelements.select(c|c.isTypeOf(Component))) { %]
+<Component name="[%=el.name%]" highlighted="[%=el.highlighted%]"  >
+[%for (ch in el.child.select(c|c.isTypeOf(RAComponent))) { %]
+<Component name="[%=ch.name%]" highlighted="[%=ch.highlighted%]" />
+[%}%]
+[%for (chc in el.child.select(c|c.isTypeOf(Connector))) { %]
+<Connector source="[%=chc.source.name%]" target="[%=chc.target.name%]" highlighted="[%=chc.highlighted%]" />  
+[%}%]
+</Component>  
+[%}%]
+[%for (el in a.architectureelements.select(c|c.isTypeOf(Connector))) { %]
+<Connector source="[%=el.source.name%]" target="[%=el.target.name%]" highlighted="[%=el.highlighted%]"  />  
+[%}%]
+</ArchitectureModel>
+[%}%]

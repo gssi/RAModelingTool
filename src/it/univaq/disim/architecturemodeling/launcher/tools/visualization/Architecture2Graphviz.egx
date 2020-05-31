@@ -1,0 +1,36 @@
+rule Architecture2Graphviz 
+  transform n : architecturemodeling::ArchitectureModel {
+ 
+  template : "architecture2graphviz.egl"
+ 
+  parameters : Map{
+    "path" = Sequence{"Architecture"},
+    "icon" = "diagram-ffffff",
+    "format" = "graphviz-circo",
+    "layers" = Sequence {
+   		 Map {"id"="outgoing", "title"="outgoing", "active"=true},
+      	 Map {"id"="incoming", "title"="incoming", "active"=true}
+    },
+    "architectureelements" = n.architectureelements
+  }
+  
+}
+
+rule Component2Graphviz 
+  transform c : architecturemodeling::Component {
+ 
+  template : "architecture2graphviz.egl"
+ 
+  parameters : Map{
+    "path" = Sequence{"Architecture", c.name},
+    "icon" = "diagram-c0c0c0",
+    "format" = "graphviz-dot",
+    "layers" = Sequence {
+      Map {"id"="outgoing", "title"="outgoing", "active"=true},
+      Map {"id"="incoming", "title"="incoming", "active"=true}
+    },
+    "architectureelements" = Sequence{c}
+  }
+  }
+  
+

@@ -1,0 +1,46 @@
+
+
+context mymodel!ReferenceArchitecturalModel {
+  
+  // Every NamedElement must define a name
+  constraint HasName {
+    
+    check : self.referenceArchitecturalName <> ""
+
+    message : "The reference architecture " + self + " must define a name"
+    
+  }
+}
+
+context mymodel!RAComponent {
+
+	constraint nocycle {
+	    
+	    check : not self.allIncoming().includes(self)
+	    //self.outgoing.targetRef.forAll(t| not self.incoming.sourceRef.includes(t))
+	
+	    message : "The component  "+self.name+" must not be defined in cycles of connectors "
+	   
+	   fix {
+		title : "Fix the components"
+		do {
+			self.highlighted := true;
+		
+		}
+	} 
+ }
+} 
+ 
+operation RAComponent allIncoming(visited : Set) : Set {
+  for (n in self.incoming.collect(e|e.sourceRef)) {
+    if (not visited.includes(n)) {
+      visited.add(n);
+      visited.addAll(n.allIncoming(visited));
+    }
+  }
+  return visited;
+}
+
+operation RAComponent allIncoming() : Set {
+  return self.allIncoming(Set{});
+}

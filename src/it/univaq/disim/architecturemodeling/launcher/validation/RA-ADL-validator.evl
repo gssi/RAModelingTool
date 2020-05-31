@@ -1,0 +1,33 @@
+
+import "validation-scripts.eol";
+
+
+context weaving!RA_ADL_Relation{
+constraint relationType {
+check :   self.checkRelation()
+
+message: "component: "+self.component.name+" does not respect the RA rules"
+fix {
+	title : "Fix "+self.component.name
+	do {
+		for (c in self.component) { 
+		c.highlighted:=true;
+		
+		}
+		
+		
+	}
+}
+}
+
+}
+
+context weaving!Implementation_model{
+constraint MandatoryComponents {
+check :  self.checkMandatoryComponents()
+
+message: "Not all the mandatory components in the RA are used in the architecture"
+}
+
+}
+

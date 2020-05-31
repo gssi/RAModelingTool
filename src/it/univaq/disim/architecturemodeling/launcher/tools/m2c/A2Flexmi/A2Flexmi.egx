@@ -1,0 +1,9 @@
+rule A2Graphviz 
+  transform a : architecturemodeling::ArchitectureModel {
+ 
+  template : "A2Flexmi.egl"
+
+   target : "gen/" + a.name + ".flexmi"
+ 
+  
+}
