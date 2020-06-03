@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modelink threeWay="true" forceExeedL="false" forceExeedM="false" forceExeedR="false">
+  <model path="/it.gssi.cs.RAModelingTools/src/it/univaq/disim/architecturemodeling/launcher/models/referencearchitectures/mutations/Ramm1.ecore" position="LEFT" />
+  <model path="/it.gssi.cs.RAModelingTools/src/it/univaq/disim/architecturemodeling/launcher/models/weaving/mutations/RA1A1RAW1.model" position="MIDDLE" />
+  <model path="/it.gssi.cs.RAModelingTools/src/it/univaq/disim/architecturemodeling/launcher/models/architectures/mutations/mozilla_1.model" position="RIGHT" />
+</modelink>
+

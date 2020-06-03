@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ASCII"?>
+<ecore:Implementation_model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://it.univaq.disim/ra_adl" xmi:id="_W8qwIDlIEeqKz4gfR816ng">
+  <relations xmi:id="_Fz1HcDlqEeqBdr-uj-QR5A">
+    <RAcomp href="../../referencearchitectures/mutations/Ramm2.ecore#//UserInterface"/>
+    <component href="../../architectures/mutations/mozilla_1.model#_WTIE4Dk9EeqJcpqbl9BcQw"/>
+    <component href="../../architectures/mutations/mozilla_1.model#_X-O70Dk9EeqJcpqbl9BcQw"/>
+  </relations>
+  <relations xmi:id="_iqES8DlqEeqBdr-uj-QR5A">
+    <RAcomp href="../../referencearchitectures/mutations/Ramm2.ecore#//BrowserEngine"/>
+    <RAcomp href="../../referencearchitectures/mutations/Ramm2.ecore#//RenderingEngine"/>
+    <component href="../../architectures/mutations/mozilla_1.model#_eQNQMDk9EeqJcpqbl9BcQw"/>
+  </relations>
+  <relations xmi:id="_nICsAD39EeqEH4dp3OLgUw">
+    <RAcomp href="../../referencearchitectures/mutations/Ramm2.ecore#//DataPersistence"/>
+    <component href="../../architectures/mutations/mozilla_1.model#_6FnbMD37EeqEH4dp3OLgUw"/>
+  </relations>
+  <relations xmi:id="_rDTAoD39EeqEH4dp3OLgUw">
+    <RAcomp href="../../referencearchitectures/mutations/Ramm2.ecore#//Networking"/>
+    <component href="../../architectures/mutations/mozilla_1.model#_spa70D37EeqEH4dp3OLgUw"/>
+  </relations>
+  <relations xmi:id="_v_3BQD39EeqEH4dp3OLgUw">
+    <RAcomp href="../../referencearchitectures/mutations/Ramm2.ecore#//JavascriptInterpreter"/>
+    <component href="../../architectures/mutations/mozilla_1.model#_x4nkkD37EeqEH4dp3OLgUw"/>
+  </relations>
+  <relations xmi:id="_zkbUMD39EeqEH4dp3OLgUw">
+    <RAcomp href="../../referencearchitectures/mutations/Ramm2.ecore#//XMLParser"/>
+    <component href="../../architectures/mutations/mozilla_1.model#_0G6BED37EeqEH4dp3OLgUw"/>
+  </relations>
+  <relations xmi:id="_29HHQD39EeqEH4dp3OLgUw">
+    <RAcomp href="../../referencearchitectures/mutations/Ramm2.ecore#//DisplayBackend"/>
+    <component href="../../architectures/mutations/mozilla_1.model#_1lW8ED37EeqEH4dp3OLgUw"/>
+    <component href="../../architectures/mutations/mozilla_1.model#_3YCaoD37EeqEH4dp3OLgUw"/>
+  </relations>
+</ecore:Implementation_model>

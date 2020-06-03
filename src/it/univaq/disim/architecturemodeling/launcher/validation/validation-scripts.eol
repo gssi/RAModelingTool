@@ -13,13 +13,15 @@ var ecoreUtil = emfTool.ecoreUtil;
 var relation= self;
 var components= self.component;
 var racomponents=self.RAcomp;
-
+//components.println();
 for (comp in components) { 
 //("comp: "+ comp).println();
 	for(r in comp.outgoing){
+	
 	var source= r.source;
 	//source.println();
 	var target=r.target;
+	
 	//target.println();
 	//var existing_rels_typing=racomponents.collect(rac|rac.eAllStructuralFeatures.etype).flatten();
 	
@@ -37,7 +39,7 @@ for (comp in components) {
 		 	return false;
 		}
 	}
-		 return true;
+	return true;
 	}
 }
 return true;

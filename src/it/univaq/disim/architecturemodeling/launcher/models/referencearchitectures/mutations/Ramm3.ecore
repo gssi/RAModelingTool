@@ -14,7 +14,6 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="re_net" eType="#//Networking"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="re_ji" eType="#//JavascriptInterpreter"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="re_xml" eType="#//XMLParser"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="re_db" eType="#//DisplayBackend"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Networking"/>
   <eClassifiers xsi:type="ecore:EClass" name="JavascriptInterpreter"/>

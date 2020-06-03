@@ -11,12 +11,14 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="be_dp" eType="#//DataPersistence"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RenderingEngine">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="re_net" eType="#//Networking"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="re_ji" eType="#//JavascriptInterpreter"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="re_xml" eType="#//XMLParser"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="re_db" eType="#//DisplayBackend"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Networking"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Networking">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="net_js" lowerBound="1"
+        eType="#//JavascriptInterpreter"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="JavascriptInterpreter"/>
   <eClassifiers xsi:type="ecore:EClass" name="XMLParser"/>
   <eClassifiers xsi:type="ecore:EClass" name="DisplayBackend"/>
