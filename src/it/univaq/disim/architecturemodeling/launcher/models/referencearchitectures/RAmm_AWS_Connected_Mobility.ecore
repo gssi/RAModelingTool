@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="RAAWSConnectedMobility" nsURI="http://it.univaq.disim/RAAWSConnectedMobility"
+    nsPrefix="RAAWSConnectedMobility">
+  <eClassifiers xsi:type="ecore:EClass" name="ConnectedVehicle" eSuperTypes="RAmm_publisher-subscriber.ecore#//Publisher"/>
+  <eClassifiers xsi:type="ecore:EClass" name="IoTCore" eSuperTypes="RAmm_publisher-subscriber.ecore#//Broker">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="iotcore_rt" lowerBound="1"
+        eType="#//RawTelemetry"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="iotcore_ad" lowerBound="1"
+        eType="#//AnomalyDetection"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="iotcore_ds" lowerBound="1"
+        eType="#//DriverScore"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="iotcore_dc" lowerBound="1"
+        eType="#//DiagnosticCodes"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="iotcore_dtgps" lowerBound="1"
+        eType="#//DrivetrainTelemetryandGPS"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="iotcore_vs" lowerBound="1"
+        eType="#//VehicleSimulators"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="iotcore_iotdm" lowerBound="1"
+        eType="#//IoTDeviceManagement" eOpposite="#//IoTDeviceManagement/iotdm_iotcore"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RawTelemetry" eSuperTypes="RAmm_publisher-subscriber.ecore#//Subscriber"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AnomalyDetection" eSuperTypes="RAmm_publisher-subscriber.ecore#//Subscriber">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ad_fmdsa" lowerBound="1"
+        eType="#//FleetManagerDataStorageandAccess"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DriverScore" eSuperTypes="RAmm_publisher-subscriber.ecore#//Subscriber"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DiagnosticCodes" eSuperTypes="#//DriverScore">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dc_fmdsa" lowerBound="1"
+        eType="#//FleetManagerDataStorageandAccess"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DrivetrainTelemetryandGPS" eSuperTypes="RAmm_publisher-subscriber.ecore#//Subscriber">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dtgps_fmdsa" lowerBound="1"
+        eType="#//FleetManagerDataStorageandAccess"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VehicleSimulators" eSuperTypes="RAmm_publisher-subscriber.ecore#//Subscriber">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="vs_fmdsa" lowerBound="1"
+        eType="#//FleetManagerDataStorageandAccess"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="vs_awscdm" lowerBound="1"
+        eType="#//AWSConnectedDeviceFramework" eOpposite="#//AWSConnectedDeviceFramework/awscdm_vs"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IoTDeviceManagement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="iotdm_iotcore" lowerBound="1"
+        eType="#//IoTCore" eOpposite="#//IoTCore/iotcore_iotdm"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="iotdm_awscdm" lowerBound="1"
+        eType="#//AWSConnectedDeviceFramework" eOpposite="#//AWSConnectedDeviceFramework/awscdm_iotdm"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AWSConnectedDeviceFramework">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="awscdm_iotdm" lowerBound="1"
+        eType="#//IoTDeviceManagement" eOpposite="#//IoTDeviceManagement/iotdm_awscdm"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="awscdm_vs" lowerBound="1"
+        eType="#//VehicleSimulators" eOpposite="#//VehicleSimulators/vs_awscdm"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FleetManagementUI">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fmui_fm" lowerBound="1"
+        eType="#//FleetManager" eOpposite="#//FleetManager/fm_fmui"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FleetManagerDataStorageandAccess">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fmdsa_fm" lowerBound="1"
+        eType="#//FleetManager" eOpposite="#//FleetManager/fm_fmdsa"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AutomotiveFacade">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="af_fm" lowerBound="1" eType="#//FleetManager"
+        eOpposite="#//FleetManager/fm_af"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="af_aswcdm" lowerBound="1"
+        eType="#//AWSConnectedDeviceFramework"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FleetManager">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="userIcon" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EByteArray"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fm_fmui" lowerBound="1"
+        eType="#//FleetManagementUI" eOpposite="#//FleetManagementUI/fmui_fm"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fm_fmdsa" lowerBound="1"
+        eType="#//FleetManagerDataStorageandAccess" eOpposite="#//FleetManagerDataStorageandAccess/fmdsa_fm"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fm_af" lowerBound="1" eType="#//AutomotiveFacade"
+        eOpposite="#//AutomotiveFacade/af_fm"/>
+  </eClassifiers>
+</ecore:EPackage>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="ASCII"?>
+<referencearchitecturemodeling:ReferenceArchitecturalModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:referencearchitecturemodeling="http://it.univaq.disim/referencearchitecturemodeling-1st-revision" xmi:id="_209ucKOlEeyTufOx-wewsQ" referenceArchitecturalName="RAAWSConnectedMobility">
+  <raelements xsi:type="referencearchitecturemodeling:RAComponent" xmi:id="_MEqmYKOmEeyTufOx-wewsQ" name="ConnectedVehicle" outgoing="_QL1d0KOrEeyTufOx-wewsQ">
+    <types xsi:type="referencearchitecturemodeling:RAComponent" href="RA_publisher-subscriber.model#_isEskKOwEeyTufOx-wewsQ"/>
+  </raelements>
+  <raelements xsi:type="referencearchitecturemodeling:RAComponent" xmi:id="_Q9TwUKOmEeyTufOx-wewsQ" name="IoTCore" incoming="_QL1d0KOrEeyTufOx-wewsQ" outgoing="_XNUjkKOrEeyTufOx-wewsQ _4-n64KOrEeyTufOx-wewsQ _9ebuEKOrEeyTufOx-wewsQ _BErcAKOsEeyTufOx-wewsQ _FaJAYKOsEeyTufOx-wewsQ _J7TecKOsEeyTufOx-wewsQ _Os3I8KOsEeyTufOx-wewsQ" mandatory="true">
+    <types xsi:type="referencearchitecturemodeling:RAComponent" href="RA_publisher-subscriber.model#_m_AhYKOwEeyTufOx-wewsQ"/>
+  </raelements>
+  <raelements xsi:type="referencearchitecturemodeling:RAComponent" xmi:id="_cN4FoKOmEeyTufOx-wewsQ" name="RawTelemetry" incoming="_XNUjkKOrEeyTufOx-wewsQ" mandatory="true">
+    <types xsi:type="referencearchitecturemodeling:RAComponent" href="RA_publisher-subscriber.model#_ll6ngKOwEeyTufOx-wewsQ"/>
+  </raelements>
+  <raelements xsi:type="referencearchitecturemodeling:RAComponent" xmi:id="_eOwYQKOmEeyTufOx-wewsQ" name="AnomalyDetection" incoming="_4-n64KOrEeyTufOx-wewsQ" outgoing="_Yg7rEKOsEeyTufOx-wewsQ">
+    <types xsi:type="referencearchitecturemodeling:RAComponent" href="RA_publisher-subscriber.model#_ll6ngKOwEeyTufOx-wewsQ"/>
+  </raelements>
+  <raelements xsi:type="referencearchitecturemodeling:RAComponent" xmi:id="_hqVHQKOmEeyTufOx-wewsQ" name="DriverScore" incoming="_9ebuEKOrEeyTufOx-wewsQ" mandatory="true">
+    <types xsi:type="referencearchitecturemodeling:RAComponent" href="RA_publisher-subscriber.model#_ll6ngKOwEeyTufOx-wewsQ"/>
+  </raelements>
+  <raelements xsi:type="referencearchitecturemodeling:RAComponent" xmi:id="_HNdfgKOpEeyTufOx-wewsQ" name="DiagnosticCodes" incoming="_BErcAKOsEeyTufOx-wewsQ" outgoing="_doqZ4KOsEeyTufOx-wewsQ" mandatory="true">
+    <types xsi:type="referencearchitecturemodeling:RAComponent" href="RA_publisher-subscriber.model#_ll6ngKOwEeyTufOx-wewsQ"/>
+  </raelements>
+  <raelements xsi:type="referencearchitecturemodeling:RAComponent" xmi:id="_LfMacKOpEeyTufOx-wewsQ" name="DrivetrainTelemetryandGPS" incoming="_FaJAYKOsEeyTufOx-wewsQ" outgoing="_lGePQKOsEeyTufOx-wewsQ" mandatory="true">
+    <types xsi:type="referencearchitecturemodeling:RAComponent" href="RA_publisher-subscriber.model#_ll6ngKOwEeyTufOx-wewsQ"/>
+  </raelements>
+  <raelements xsi:type="referencearchitecturemodeling:RAComponent" xmi:id="_S2HksKOpEeyTufOx-wewsQ" name="VehicleSimulators" incoming="_J7TecKOsEeyTufOx-wewsQ" outgoing="_ulbdAKOsEeyTufOx-wewsQ _zzh5kKOsEeyTufOx-wewsQ">
+    <types xsi:type="referencearchitecturemodeling:RAComponent" href="RA_publisher-subscriber.model#_ll6ngKOwEeyTufOx-wewsQ"/>
+  </raelements>
+  <raelements xsi:type="referencearchitecturemodeling:RAComponent" xmi:id="_g6k98KOpEeyTufOx-wewsQ" name="IoTDeviceManagement" incoming="_Os3I8KOsEeyTufOx-wewsQ" outgoing="_UZt-EKOsEeyTufOx-wewsQ" mandatory="true"/>
+  <raelements xsi:type="referencearchitecturemodeling:RAComponent" xmi:id="_xoZmIKOpEeyTufOx-wewsQ" name="AWSConnectedDeviceFramework" incoming="_UZt-EKOsEeyTufOx-wewsQ _zzh5kKOsEeyTufOx-wewsQ _ITYo8KOtEeyTufOx-wewsQ" mandatory="true"/>
+  <raelements xsi:type="referencearchitecturemodeling:RAComponent" xmi:id="_0zGAgKOpEeyTufOx-wewsQ" name="FleetManagementUI" outgoing="_41D5wKOsEeyTufOx-wewsQ" mandatory="true"/>
+  <raelements xsi:type="referencearchitecturemodeling:RAComponent" xmi:id="_3SYtcKOpEeyTufOx-wewsQ" name="FleetManagerDataStorageandAccess" incoming="_Yg7rEKOsEeyTufOx-wewsQ _doqZ4KOsEeyTufOx-wewsQ _lGePQKOsEeyTufOx-wewsQ _ulbdAKOsEeyTufOx-wewsQ" outgoing="_-m_cIKOsEeyTufOx-wewsQ" mandatory="true"/>
+  <raelements xsi:type="referencearchitecturemodeling:RAComponent" xmi:id="_6wd94KOpEeyTufOx-wewsQ" name="AutomotiveFacade" outgoing="_EiE6gKOtEeyTufOx-wewsQ _ITYo8KOtEeyTufOx-wewsQ" mandatory="true"/>
+  <raelements xsi:type="referencearchitecturemodeling:RAComponent" xmi:id="_9dxRoKOpEeyTufOx-wewsQ" name="FleetManager" types="_Sm6q8KUxEeyeZ9WUCRNyTA" incoming="_41D5wKOsEeyTufOx-wewsQ _-m_cIKOsEeyTufOx-wewsQ _EiE6gKOtEeyTufOx-wewsQ" mandatory="true"/>
+  <raelements xsi:type="referencearchitecturemodeling:RAComponent" xmi:id="_Sm6q8KUxEeyeZ9WUCRNyTA" name="User"/>
+  <raelements xsi:type="referencearchitecturemodeling:RAConnector" xmi:id="_QL1d0KOrEeyTufOx-wewsQ" name="cv_iotcore" targetRef="_Q9TwUKOmEeyTufOx-wewsQ" sourceRef="_MEqmYKOmEeyTufOx-wewsQ"/>
+  <raelements xsi:type="referencearchitecturemodeling:RAConnector" xmi:id="_XNUjkKOrEeyTufOx-wewsQ" name="iotcore_rt" targetRef="_cN4FoKOmEeyTufOx-wewsQ" sourceRef="_Q9TwUKOmEeyTufOx-wewsQ"/>
+  <raelements xsi:type="referencearchitecturemodeling:RAConnector" xmi:id="_4-n64KOrEeyTufOx-wewsQ" name="iotcore_ad" targetRef="_eOwYQKOmEeyTufOx-wewsQ" sourceRef="_Q9TwUKOmEeyTufOx-wewsQ"/>
+  <raelements xsi:type="referencearchitecturemodeling:RAConnector" xmi:id="_9ebuEKOrEeyTufOx-wewsQ" name="iotcore_ds" targetRef="_hqVHQKOmEeyTufOx-wewsQ" sourceRef="_Q9TwUKOmEeyTufOx-wewsQ"/>
+  <raelements xsi:type="referencearchitecturemodeling:RAConnector" xmi:id="_BErcAKOsEeyTufOx-wewsQ" name="iotcore_dc" targetRef="_HNdfgKOpEeyTufOx-wewsQ" sourceRef="_Q9TwUKOmEeyTufOx-wewsQ"/>
+  <raelements xsi:type="referencearchitecturemodeling:RAConnector" xmi:id="_FaJAYKOsEeyTufOx-wewsQ" name="iotcore_dtgps" targetRef="_LfMacKOpEeyTufOx-wewsQ" sourceRef="_Q9TwUKOmEeyTufOx-wewsQ"/>
+  <raelements xsi:type="referencearchitecturemodeling:RAConnector" xmi:id="_J7TecKOsEeyTufOx-wewsQ" name="iotcore_vs" targetRef="_S2HksKOpEeyTufOx-wewsQ" sourceRef="_Q9TwUKOmEeyTufOx-wewsQ"/>
+  <raelements xsi:type="referencearchitecturemodeling:RAConnector" xmi:id="_Os3I8KOsEeyTufOx-wewsQ" name="iotcore_iotdm" targetRef="_g6k98KOpEeyTufOx-wewsQ" sourceRef="_Q9TwUKOmEeyTufOx-wewsQ" twoWay="true"/>
+  <raelements xsi:type="referencearchitecturemodeling:RAConnector" xmi:id="_UZt-EKOsEeyTufOx-wewsQ" name="iotdm_awscdm" targetRef="_xoZmIKOpEeyTufOx-wewsQ" sourceRef="_g6k98KOpEeyTufOx-wewsQ" twoWay="true"/>
+  <raelements xsi:type="referencearchitecturemodeling:RAConnector" xmi:id="_Yg7rEKOsEeyTufOx-wewsQ" name="ad_fmdsa" targetRef="_3SYtcKOpEeyTufOx-wewsQ" sourceRef="_eOwYQKOmEeyTufOx-wewsQ"/>
+  <raelements xsi:type="referencearchitecturemodeling:RAConnector" xmi:id="_doqZ4KOsEeyTufOx-wewsQ" name="dc_fmdsa" targetRef="_3SYtcKOpEeyTufOx-wewsQ" sourceRef="_HNdfgKOpEeyTufOx-wewsQ"/>
+  <raelements xsi:type="referencearchitecturemodeling:RAConnector" xmi:id="_lGePQKOsEeyTufOx-wewsQ" name="dtgps_fmdsa" targetRef="_3SYtcKOpEeyTufOx-wewsQ" sourceRef="_LfMacKOpEeyTufOx-wewsQ"/>
+  <raelements xsi:type="referencearchitecturemodeling:RAConnector" xmi:id="_ulbdAKOsEeyTufOx-wewsQ" name="vs_fmdsa" targetRef="_3SYtcKOpEeyTufOx-wewsQ" sourceRef="_S2HksKOpEeyTufOx-wewsQ" twoWay="true"/>
+  <raelements xsi:type="referencearchitecturemodeling:RAConnector" xmi:id="_zzh5kKOsEeyTufOx-wewsQ" name="vs_awscdm" targetRef="_xoZmIKOpEeyTufOx-wewsQ" sourceRef="_S2HksKOpEeyTufOx-wewsQ" twoWay="true"/>
+  <raelements xsi:type="referencearchitecturemodeling:RAConnector" xmi:id="_41D5wKOsEeyTufOx-wewsQ" name="fmui_fm" targetRef="_9dxRoKOpEeyTufOx-wewsQ" sourceRef="_0zGAgKOpEeyTufOx-wewsQ" twoWay="true"/>
+  <raelements xsi:type="referencearchitecturemodeling:RAConnector" xmi:id="_-m_cIKOsEeyTufOx-wewsQ" name="fmdsa_fm" targetRef="_9dxRoKOpEeyTufOx-wewsQ" sourceRef="_3SYtcKOpEeyTufOx-wewsQ" twoWay="true"/>
+  <raelements xsi:type="referencearchitecturemodeling:RAConnector" xmi:id="_EiE6gKOtEeyTufOx-wewsQ" name="af_fm" targetRef="_9dxRoKOpEeyTufOx-wewsQ" sourceRef="_6wd94KOpEeyTufOx-wewsQ" twoWay="true"/>
+  <raelements xsi:type="referencearchitecturemodeling:RAConnector" xmi:id="_ITYo8KOtEeyTufOx-wewsQ" name="af_aswcdm" targetRef="_xoZmIKOpEeyTufOx-wewsQ" sourceRef="_6wd94KOpEeyTufOx-wewsQ"/>
+</referencearchitecturemodeling:ReferenceArchitecturalModel>

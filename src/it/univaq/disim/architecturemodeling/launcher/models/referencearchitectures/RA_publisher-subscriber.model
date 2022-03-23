@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ASCII"?>
+<referencearchitecturemodeling:ReferenceArchitecturalModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:referencearchitecturemodeling="http://it.univaq.disim/referencearchitecturemodeling-1st-revision" xmi:id="_hyFwkKOwEeyTufOx-wewsQ" referenceArchitecturalName="RAPublisherSubscriber">
+  <raelements xsi:type="referencearchitecturemodeling:RAComponent" xmi:id="_isEskKOwEeyTufOx-wewsQ" name="Publisher" attributes="_Ei_dMKUxEeyeZ9WUCRNyTA"/>
+  <raelements xsi:type="referencearchitecturemodeling:RAComponent" xmi:id="_ll6ngKOwEeyTufOx-wewsQ" name="Subscriber" attributes="_Ei_dMKUxEeyeZ9WUCRNyTA"/>
+  <raelements xsi:type="referencearchitecturemodeling:RAComponent" xmi:id="_m_AhYKOwEeyTufOx-wewsQ" name="Broker" attributes="_Ei_dMKUxEeyeZ9WUCRNyTA"/>
+  <raattributes xmi:id="_Ei_dMKUxEeyeZ9WUCRNyTA" name="topic">
+    <value xsi:type="referencearchitecturemodeling:RASimpleValue" xmi:id="_GDPvAKUxEeyeZ9WUCRNyTA" type="String"/>
+  </raattributes>
+</referencearchitecturemodeling:ReferenceArchitecturalModel>

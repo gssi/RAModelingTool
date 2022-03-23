@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="ASCII"?>
+<rawmm:ImplementationModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:rawmm="http://it.univaq.disim/rawmm" xmi:id="_eYhMIKqUEeyJGsNGXILArQ">
+  <relations xmi:id="_CM5FEKquEey4YIE3csSe8A">
+    <racomp href="../referencearchitectures/RAmm_AWS_Connected_Mobility.ecore#//ConnectedVehicle"/>
+    <component href="../architectures/AWS_Connected_Mobility_Architecture.model#_RwuBwKU8EeyWOYyEibASyg"/>
+  </relations>
+  <relations xmi:id="_F7h6AKquEey4YIE3csSe8A">
+    <racomp href="../referencearchitectures/RAmm_AWS_Connected_Mobility.ecore#//IoTCore"/>
+    <component href="../architectures/AWS_Connected_Mobility_Architecture.model#_PxjpkKVAEeyWOYyEibASyg"/>
+  </relations>
+  <relations xmi:id="_JcL9UKquEey4YIE3csSe8A">
+    <racomp href="../referencearchitectures/RAmm_AWS_Connected_Mobility.ecore#//RawTelemetry"/>
+    <component href="../architectures/AWS_Connected_Mobility_Architecture.model#_VAudIKVAEeyWOYyEibASyg"/>
+  </relations>
+  <relations xmi:id="_f6qVgKquEey4YIE3csSe8A">
+    <racomp href="../referencearchitectures/RAmm_AWS_Connected_Mobility.ecore#//AnomalyDetection"/>
+    <component href="../architectures/AWS_Connected_Mobility_Architecture.model#_dAZpcKVAEeyWOYyEibASyg"/>
+    <component href="../architectures/AWS_Connected_Mobility_Architecture.model#_fVAwYKVAEeyWOYyEibASyg"/>
+    <component href="../architectures/AWS_Connected_Mobility_Architecture.model#_hzSJoKVAEeyWOYyEibASyg"/>
+    <component href="../architectures/AWS_Connected_Mobility_Architecture.model#_SsVb0KVEEeyWOYyEibASyg"/>
+    <component href="../architectures/AWS_Connected_Mobility_Architecture.model#_Ug2tcKVEEeyWOYyEibASyg"/>
+  </relations>
+  <relations xmi:id="_o694YKquEey4YIE3csSe8A">
+    <racomp href="../referencearchitectures/RAmm_AWS_Connected_Mobility.ecore#//DriverScore"/>
+    <component href="../architectures/AWS_Connected_Mobility_Architecture.model#_XmfosKVEEeyWOYyEibASyg"/>
+    <component href="../architectures/AWS_Connected_Mobility_Architecture.model#_b2LVMKVEEeyWOYyEibASyg"/>
+  </relations>
+  <relations xmi:id="_t2TJ8KquEey4YIE3csSe8A">
+    <racomp href="../referencearchitectures/RAmm_AWS_Connected_Mobility.ecore#//DiagnosticCodes"/>
+    <component href="../architectures/AWS_Connected_Mobility_Architecture.model#_iS-ZgKVEEeyWOYyEibASyg"/>
+  </relations>
+  <relations xmi:id="_wTzuMKquEey4YIE3csSe8A">
+    <racomp href="../referencearchitectures/RAmm_AWS_Connected_Mobility.ecore#//DrivetrainTelemetryandGPS"/>
+    <component href="../architectures/AWS_Connected_Mobility_Architecture.model#_pb91cKVEEeyWOYyEibASyg"/>
+    <component href="../architectures/AWS_Connected_Mobility_Architecture.model#_tFWW8KVEEeyWOYyEibASyg"/>
+  </relations>
+  <relations xmi:id="_zq3JkKquEey4YIE3csSe8A">
+    <racomp href="../referencearchitectures/RAmm_AWS_Connected_Mobility.ecore#//VehicleSimulators"/>
+    <component href="../architectures/AWS_Connected_Mobility_Architecture.model#_1h9W4KVEEeyWOYyEibASyg"/>
+  </relations>
+  <relations xmi:id="_7HHfwKquEey4YIE3csSe8A">
+    <racomp href="../referencearchitectures/RAmm_AWS_Connected_Mobility.ecore#//IoTDeviceManagement"/>
+    <component href="../architectures/AWS_Connected_Mobility_Architecture.model#_EwYMYKVGEeyWOYyEibASyg"/>
+  </relations>
+  <relations xmi:id="_-UCuwKquEey4YIE3csSe8A">
+    <racomp href="../referencearchitectures/RAmm_AWS_Connected_Mobility.ecore#//AWSConnectedDeviceFramework"/>
+    <component href="../architectures/AWS_Connected_Mobility_Architecture.model#_KOxuwKVGEeyWOYyEibASyg"/>
+    <component href="../architectures/AWS_Connected_Mobility_Architecture.model#_ML7_AKVGEeyWOYyEibASyg"/>
+    <component href="../architectures/AWS_Connected_Mobility_Architecture.model#_OJU4wKVGEeyWOYyEibASyg"/>
+    <component href="../architectures/AWS_Connected_Mobility_Architecture.model#_QFlKEKVGEeyWOYyEibASyg"/>
+    <component href="../architectures/AWS_Connected_Mobility_Architecture.model#_U_69IKVGEeyWOYyEibASyg"/>
+    <component href="../architectures/AWS_Connected_Mobility_Architecture.model#_XWw4sKVGEeyWOYyEibASyg"/>
+    <component href="../architectures/AWS_Connected_Mobility_Architecture.model#_ZeJb8KVGEeyWOYyEibASyg"/>
+    <component href="../architectures/AWS_Connected_Mobility_Architecture.model#_bpOMYKVGEeyWOYyEibASyg"/>
+    <component href="../architectures/AWS_Connected_Mobility_Architecture.model#_dOYMUKVGEeyWOYyEibASyg"/>
+    <component href="../architectures/AWS_Connected_Mobility_Architecture.model#_e2D70KVGEeyWOYyEibASyg"/>
+  </relations>
+  <relations xmi:id="_H6AjcKqvEey4YIE3csSe8A">
+    <racomp href="../referencearchitectures/RAmm_AWS_Connected_Mobility.ecore#//FleetManagementUI"/>
+    <component href="../architectures/AWS_Connected_Mobility_Architecture.model#_h4hcsKVFEeyWOYyEibASyg"/>
+    <component href="../architectures/AWS_Connected_Mobility_Architecture.model#_jyoY8KVFEeyWOYyEibASyg"/>
+    <component href="../architectures/AWS_Connected_Mobility_Architecture.model#_mpvwAKVFEeyWOYyEibASyg"/>
+  </relations>
+  <relations xmi:id="_OB1dUKqvEey4YIE3csSe8A">
+    <racomp href="../referencearchitectures/RAmm_AWS_Connected_Mobility.ecore#//FleetManagerDataStorageandAccess"/>
+    <component href="../architectures/AWS_Connected_Mobility_Architecture.model#_o5qkMKVFEeyWOYyEibASyg"/>
+    <component href="../architectures/AWS_Connected_Mobility_Architecture.model#_tOmkIKVFEeyWOYyEibASyg"/>
+    <component href="../architectures/AWS_Connected_Mobility_Architecture.model#_xgMVIKVFEeyWOYyEibASyg"/>
+    <component href="../architectures/AWS_Connected_Mobility_Architecture.model#_zYONwKVFEeyWOYyEibASyg"/>
+  </relations>
+  <relations xmi:id="_Rhk6oKqvEey4YIE3csSe8A">
+    <racomp href="../referencearchitectures/RAmm_AWS_Connected_Mobility.ecore#//AutomotiveFacade"/>
+    <component href="../architectures/AWS_Connected_Mobility_Architecture.model#_8x0aYKVFEeyWOYyEibASyg"/>
+    <component href="../architectures/AWS_Connected_Mobility_Architecture.model#_-y_n8KVFEeyWOYyEibASyg"/>
+  </relations>
+  <relations xmi:id="_UQuogKqvEey4YIE3csSe8A">
+    <racomp href="../referencearchitectures/RAmm_AWS_Connected_Mobility.ecore#//FleetManager"/>
+    <component href="../architectures/AWS_Connected_Mobility_Architecture.model#_Cd158KdzEey8XNw4cMPNFg"/>
+  </relations>
+</rawmm:ImplementationModel>
