@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ASCII"?>
 <architecturemodeling:ArchitectureModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:architecturemodeling="http://it.univaq.disim/architecturemodeling" xmi:id="_BED3MKU8EeyWOYyEibASyg" name="AWSConnectedMobilityArchitecture">
-  <architectureelements xsi:type="architecturemodeling:Component" xmi:id="_RwuBwKU8EeyWOYyEibASyg" name="AWS IoT SDK - AWS Greengrass - FreeRTOS" outgoing="_2qPDsKabEeyu85rgySPVEw"/>
-  <architectureelements xsi:type="architecturemodeling:Component" xmi:id="_PxjpkKVAEeyWOYyEibASyg" name="AWS IoT Core" outgoing="_98yrUKabEeyu85rgySPVEw _NNBUIKacEeyu85rgySPVEw _RnYmoKacEeyu85rgySPVEw _WXuwMKacEeyu85rgySPVEw _aunQ4KacEeyu85rgySPVEw _irYTIKacEeyu85rgySPVEw _RbHPwKadEeyu85rgySPVEw" incoming="_2qPDsKabEeyu85rgySPVEw _mbfHsKacEeyu85rgySPVEw"/>
+  <architectureelements xsi:type="architecturemodeling:Component" xmi:id="_RwuBwKU8EeyWOYyEibASyg" name="AWS IoT SDK - AWS Greengrass - FreeRTOS" highlighted="true"/>
+  <architectureelements xsi:type="architecturemodeling:Component" xmi:id="_PxjpkKVAEeyWOYyEibASyg" name="AWS IoT Core" outgoing="_98yrUKabEeyu85rgySPVEw _NNBUIKacEeyu85rgySPVEw _RnYmoKacEeyu85rgySPVEw _WXuwMKacEeyu85rgySPVEw _aunQ4KacEeyu85rgySPVEw _irYTIKacEeyu85rgySPVEw _RbHPwKadEeyu85rgySPVEw" incoming="_mbfHsKacEeyu85rgySPVEw"/>
   <architectureelements xsi:type="architecturemodeling:Component" xmi:id="_SI7woKVAEeyWOYyEibASyg" name="Amazon Kinesis Data Firehose" outgoing="_E0_SMKacEeyu85rgySPVEw" incoming="_98yrUKabEeyu85rgySPVEw"/>
   <architectureelements xsi:type="architecturemodeling:Component" xmi:id="_VAudIKVAEeyWOYyEibASyg" name="Amazon Simple Storage Service (Amazon S3)" incoming="_E0_SMKacEeyu85rgySPVEw"/>
   <architectureelements xsi:type="architecturemodeling:Component" xmi:id="_dAZpcKVAEeyWOYyEibASyg" name="Amazon Kinesis Data Analytics - Anomaly Detection" outgoing="_rN5GwKacEeyu85rgySPVEw" incoming="_NNBUIKacEeyu85rgySPVEw"/>
@@ -42,7 +42,6 @@
   <architectureelements xsi:type="architecturemodeling:Component" xmi:id="_bpOMYKVGEeyWOYyEibASyg" name="Asset library history"/>
   <architectureelements xsi:type="architecturemodeling:Component" xmi:id="_dOYMUKVGEeyWOYyEibASyg" name="Certificate vendor"/>
   <architectureelements xsi:type="architecturemodeling:Component" xmi:id="_e2D70KVGEeyWOYyEibASyg" name="Certificate rotation"/>
-  <architectureelements xsi:type="architecturemodeling:Connector" xmi:id="_2qPDsKabEeyu85rgySPVEw" name="AWSIoTSDK_AWSIoTCore" source="_RwuBwKU8EeyWOYyEibASyg" target="_PxjpkKVAEeyWOYyEibASyg"/>
   <architectureelements xsi:type="architecturemodeling:Connector" xmi:id="_98yrUKabEeyu85rgySPVEw" name="AWSIoTCore_KinesisDataFirehose" source="_PxjpkKVAEeyWOYyEibASyg" target="_SI7woKVAEeyWOYyEibASyg"/>
   <architectureelements xsi:type="architecturemodeling:Connector" xmi:id="_E0_SMKacEeyu85rgySPVEw" name="KinesisDataFirehose_AmazonS3" source="_SI7woKVAEeyWOYyEibASyg" target="_VAudIKVAEeyWOYyEibASyg"/>
   <architectureelements xsi:type="architecturemodeling:Connector" xmi:id="_NNBUIKacEeyu85rgySPVEw" name="AWSIoTCore_KinesisDataAnalyticsAnomalyDetection" source="_PxjpkKVAEeyWOYyEibASyg" target="_dAZpcKVAEeyWOYyEibASyg"/>

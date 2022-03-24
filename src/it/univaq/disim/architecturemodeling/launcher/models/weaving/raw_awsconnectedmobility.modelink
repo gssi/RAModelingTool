@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <modelink threeWay="true" forceExeedL="false" forceExeedM="false" forceExeedR="false">
-  <model path="\RAModelingTool\src\it\univaq\disim\architecturemodeling\launcher\models\referencearchitectures\RAmm_AWS_Connected_Mobility.ecore" position="LEFT" />
-  <model path="\RAModelingTool\src\it\univaq\disim\architecturemodeling\launcher\models\weaving\raw_awsconnectedmobility.model" position="MIDDLE" />
-  <model path="\RAModelingTool\src\it\univaq\disim\architecturemodeling\launcher\models\architectures\AWS_Connected_Mobility_Architecture.model" position="RIGHT" />
+  <model path="/RAModeling-project/src/it/univaq/disim/architecturemodeling/launcher/models/referencearchitectures/RAmm_AWS_Connected_Mobility.ecore" position="LEFT" />
+  <model path="/RAModeling-project/src/it/univaq/disim/architecturemodeling/launcher/models/weaving/raw_awsconnectedmobility.model" position="MIDDLE" />
+  <model path="/RAModeling-project/src/it/univaq/disim/architecturemodeling/launcher/models/architectures/AWS_Connected_Mobility_Architecture.model" position="RIGHT" />
 </modelink>
 

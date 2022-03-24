@@ -34,13 +34,13 @@ public class ASV extends EpsilonStandaloneExample {
 	@Override
 	public List<IModel> getModels() throws Exception {
 		List<IModel> models = new ArrayList<IModel>();
-		models.add(createEmfModel("mymodel", "models/referencearchitectures/RA_web_browsers_fixed.model", "metamodels/referencearchitecturemodeling.ecore", true, true));
+		models.add(createEmfModel("mymodel", "models/referencearchitectures/RA_AWS_Connected_Mobility.model", "metamodels/firstrevision/referencearchitecturemodeling.ecore", true, true));
 		return models;
 	}
 
 	@Override
 	public String getSource() throws Exception {
-		return "validation/LayeredArchitecture.evl";
+		return "validation/PubSub.evl";
 	}
 
 	@Override
