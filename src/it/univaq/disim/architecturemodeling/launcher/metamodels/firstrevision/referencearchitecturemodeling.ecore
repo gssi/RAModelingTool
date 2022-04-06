@@ -38,27 +38,35 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RAAttribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="value" lowerBound="1" eType="#//RAValueType"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="#//RAValueType"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="RAValueType" abstract="true"/>
-  <eClassifiers xsi:type="ecore:EClass" name="RASimpleValue" eSuperTypes="#//RAValueType">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="#//RASimpleValueType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RAValueType" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="RAComplexValue" eSuperTypes="#//RAValueType">
+  <eClassifiers xsi:type="ecore:EClass" name="RASimpleValueType" abstract="true" eSuperTypes="#//RAValueType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RAComplexValueType" eSuperTypes="#//RAValueType">
     <eStructuralFeatures xsi:type="ecore:EReference" name="child" lowerBound="1" upperBound="-1"
         eType="#//RAValueType" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RAEnumerationValueType" eSuperTypes="#//RAValueType">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elements" lowerBound="1"
+        upperBound="-1" eType="#//RAEnumerationItem" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="value" lowerBound="1" eType="#//RAEnumerationItem"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RAEnumerationItem">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="RASimpleValueType">
-    <eLiterals name="boolean"/>
-    <eLiterals name="byte" value="1"/>
-    <eLiterals name="short" value="2"/>
-    <eLiterals name="int" value="3"/>
-    <eLiterals name="long" value="4"/>
-    <eLiterals name="float" value="5"/>
-    <eLiterals name="double" value="6"/>
-    <eLiterals name="char" value="7"/>
-    <eLiterals name="String" value="8" literal="String"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RATextValueType" eSuperTypes="#//RASimpleValueType">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RAIntegerValueType" eSuperTypes="#//RASimpleValueType">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RARealValueType" eSuperTypes="#//RASimpleValueType">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RABooleanValueType" eSuperTypes="#//RASimpleValueType">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
   </eClassifiers>
 </ecore:EPackage>
