@@ -16,19 +16,22 @@ context mymodel!RAComponent {
 	
 	constraint pubsub {
 	    guard:  self.types.name.includes("Broker")
-	    check : self.outgoing.targetRef.types.flatten().forAll(t|t.name="Subscriber") and 
-	    self.incoming.sourceRef.types.flatten().forAll(t|t.name="Publisher")
-	  
+	    check : 
+	    self.outgoing.targetRef.types.flatten().forAll(t|t.name="Subscriber") and 
+	    self.incoming.sourceRef.types.flatten().forAll(t|t.name="Publisher") and
+	    self.attributes.name.includesAll(Sequence{"communicationprotocol","topic"})
 	    message : "The component  "+self.name+" is a broker and must have outgoing connectors to Subscribers and incoming from Publisher"
 	   
 	   fix {
 		title : "Fix the components"
 		do {
-		
+	
 			self.highlighted := true;
 		
 		}
 	} 
  }
 } 
+
+ 
  
