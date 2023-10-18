@@ -1,0 +1,43 @@
+@namespace(uri="http://it.univaq.disim/referencearchitecturemodeling", prefix="referencearchitecturemodeling")
+package referencearchitecturemodeling;
+
+class ReferenceArchitecturalModel {
+	attr String referenceArchitecturalName;
+	val RAElement[+] raelements;
+}
+
+abstract class RAElement {
+	attr String name;
+	val RAAttribute[*] attributes;
+	attr boolean highlighted = false;
+}
+
+class RAComponent extends RAElement {
+	val RAElement[*] child;
+	ref RAConnector[*]#targetRef incoming;
+	ref RAConnector[*]#sourceRef outgoing;
+	attr boolean mandatory;
+}
+
+class RAConnector extends RAElement {
+	ref RAComponent[1]#incoming targetRef;
+	ref RAComponent[1]#outgoing sourceRef;
+	attr boolean twoWay = false;
+}
+
+class RAAttribute {
+	attr String name;
+	ref RAValueType[1] value;
+}
+
+abstract class RAValueType {
+	attr String name;
+}
+
+class RASimpleValue extends RAValueType {
+}
+
+class RAComplexValue extends RAValueType {
+	val RAValueType[+] child;
+}
+

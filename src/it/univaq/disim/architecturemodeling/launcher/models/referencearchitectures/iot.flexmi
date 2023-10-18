@@ -1,0 +1,8 @@
+?nsuri: http://it.univaq.disim/referencearchitecturemodeling
+
+ReferenceArchitecturalModel: {
+name: IoT,
+RAComponent: {name: A},
+RAComponent: {name: B},
+RAConnector: {source: A,target: B}
+}

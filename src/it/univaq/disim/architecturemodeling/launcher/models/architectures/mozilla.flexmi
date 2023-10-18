@@ -1,0 +1,6 @@
+?nsuri: http://it.univaq.disim/architecturemodeling
+
+ArchitectureModel: {
+
+Component: {name: a}
+}
