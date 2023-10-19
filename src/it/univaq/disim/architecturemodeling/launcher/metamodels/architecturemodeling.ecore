@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="architecturemodeling" nsURI="http://it.univaq.disim/architecturemodeling"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="architecturemodeling" nsURI="http://it.disim.univaq/architecturemodeling"
     nsPrefix="architecturemodeling">
   <eClassifiers xsi:type="ecore:EClass" name="ArchitectureModel">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -19,6 +19,8 @@
         eType="#//Connector" eOpposite="#//Connector/source"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="incoming" upperBound="-1"
         eType="#//Connector" eOpposite="#//Connector/target"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="implements" upperBound="-1"
+        eType="ecore:EClass http://it.univaq.disim/referencearchitecturemodeling#//RAComponent"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Connector" eSuperTypes="#//ArchitectureElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
