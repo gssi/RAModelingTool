@@ -2,5 +2,8 @@
 
 ArchitectureModel: {
 
-Component: {name: a}
+Component: {name: a},
+
+Component: {name: b},
+Connector: {source: a, target: b}
 }
